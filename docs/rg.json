@@ -1,0 +1,551 @@
+{
+      "accessPolicy": "OPEN",
+      "dataSampleFile": "https://file.iudx.org.in/iudx/v1/download?file-id=datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b/rs.iudx.org.in/pune-env-aqm/sample.json",
+      "dataSample": {
+        "so2": {
+          "avgOverTime": 3.65
+        },
+        "airQualityIndex": 90,
+        "pm10": {
+          "avgOverTime": 16.71
+        },
+        "illuminance": {
+          "avgOverTime": 3319.41
+        },
+        "co2": {
+          "avgOverTime": 318.51
+        },
+        "uv": {
+          "avgOverTime": 0.81
+        },
+        "o3": {
+          "avgOverTime": 9.6
+        },
+        "relativeHumidity": {
+          "avgOverTime": 71.29
+        },
+        "ambientNoise": {
+          "avgOverTime": 61.06
+        },
+        "airQualityLevel": "SATISFATORY",
+        "no2": {
+          "avgOverTime": 6.59
+        },
+        "airTemperature": {
+          "avgOverTime": 27.76
+        },
+        "atmosphericPressure": {
+          "avgOverTime": 0.92
+        },
+        "observationDateTime": "2020-09-16T11:00:00+05:30",
+        "pm2p5": {
+          "avgOverTime": 9.05
+        },
+        "co": {
+          "avgOverTime": 1.54
+        },
+        "deviceStatus": "ACTIVE",
+        "aqiMajorPollutant": "no2"
+      },
+      "itemStatus": "ACTIVE",
+      "type": [
+        "iudx:ResourceGroup",
+        "iudx:EnvAQM"
+      ],
+      "provider": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc",
+      "iudxResourceAPIs": [
+        "ATTR",
+        "TEMPORAL"
+      ],
+      "location": {
+        "address": "Pune, Maharashtra",
+        "type": "Place"
+      },
+      "@context": "https://voc.iudx.org.in/",
+      "tags": [
+        "environment",
+        "air quality",
+        "climate",
+        "air",
+        "aqi",
+        "aqm",
+        "climo",
+        "pollution",
+        "so2",
+        "co2",
+        "co",
+        "no",
+        "no2",
+        "pm2.5",
+        "pm10",
+        "humidity",
+        "temperature",
+        "ozone",
+        "o3",
+        "noise",
+        "light",
+        "uv"
+      ],
+      "name": "pune-env-aqm",
+      "description": "Air quality monitoring devices/sensors measure ambient pollutants and are an integral part of most smart city deployments.  IUDX provides realtime and historical data for Pune Air Quality Sensors publicly (Free to consume). In this sandbox, we illustrate the consumption of this datasource and perform some interesting analytics on the data such as a realtime geo-spatio-temporal view of the pollution levels in the city and also attempt to predict pollution levels temporally and spatially. Find more information about this resource  <u><a href=\"https://catalogue.iudx.org.in/dataset/datakaveri.org-04a15c9960ffda227e9546f3f46e629e1fe4132b-rs.iudx.org.in-pune-env-aqm\" target=\"_blank\">here</a></u>. <br/>  <img src=\"https://raw.githubusercontent.com/datakaveri/sandbox-aqm/main/docs/climo.jpg\" alt=\"AQM Device\" height=\"200\" width=\"300\"/> <img src=\"https://raw.githubusercontent.com/datakaveri/sandbox-aqm/main/docs/analytic1.png\" alt=\"AQM Device\" height=\"200\" width=\"300\"/>.",
+      "resourceServer": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc/cat-sandbox.iudx.org.in",
+      "resourceType": "MESSAGESTREAM",
+      "label": "Pune Air Quality Monitoring Sensors",
+      "dataDescriptor": {
+        "so2": {
+          "description": "Describes instantaneous and/or aggregated values for sulphur dioxide(SO2).",
+          "maxOverTime": {
+            "description": "Maximum value of SO2 for the last 24 hours",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of SO2 for the last 15 minutes",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Minimum value of SO2 for the last 24 hours",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "airTemperature": {
+          "description": "Describes instantaneous and/or aggregated values for air temperature.",
+          "avgOverTime": {
+            "description": "Average value of temperature for the last 15 minutes",
+            "unitCode": "CEL",
+            "unitText": "degree Celsius (C)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "pm10": {
+          "description": "Describes instantaneous and/or aggregated values for particulate matter 10(PM10).",
+          "maxOverTime": {
+            "description": "Maximum value of PM10 for the last 24 hours",
+            "unitCode": "GQ",
+            "unitText": "micro gram per cubic metre (ug/m3)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of PM10 for the last 15 minutes",
+            "unitCode": "GQ",
+            "unitText": "micro gram per cubic metre (ug/m3)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Maximum value of PM10 for the last 24 hours",
+            "unitCode": "GQ",
+            "unitText": "micro gram per cubic metre (ug/m3)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "illuminance": {
+          "description": "Describes instantaneous and/or aggregated ambient light intensity.",
+          "avgOverTime": {
+            "description": "Average value of ambient light intensity for the last 15 minutes",
+            "unitCode": "LUX",
+            "unitText": "lux (lx)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "co2": {
+          "description": "Describes instantaneous and/or aggregated values for carban dioxide(CO2).",
+          "maxOverTime": {
+            "description": "Maximum value of CO2 for the last 24 hours",
+            "unitCode": "59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of CO2 for the last 15 minutes",
+            "unitCode": "59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Minimum value of CO2 for the last 24 hours",
+            "unitCode": "59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "airQualityIndex": {
+          "description": "Overall AQI",
+          "unitCode": "C62",
+          "dataSchema": "iudx:Number",
+          "unitText": "dimensionless",
+          "type": [
+            "ValueDescriptor"
+          ]
+        },
+        "type": [
+          "iudx:DataDescriptor",
+          "iudx:EnvAQM"
+        ],
+        "uv": {
+          "description": "Describes instantaneous and/or aggregated values for Ultraviolet (UV) radiation.",
+          "avgOverTime": {
+            "description": "Average value of UV radiation for the last 15 minutes",
+            "unitCode": "C62",
+            "unitText": "UV Index (uvi)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "o3": {
+          "description": "Describes instantaneous and/or aggregated values for Ozone(O3).",
+          "maxOverTime": {
+            "description": "Maximum value of O3 for the last 24 hours",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of O3 for the last 15 minutes",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Maximum value of O3 for the last 24 hours",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "@context": "https://voc.iudx.org.in/",
+        "ambientNoise": {
+          "description": "Describes instantaneous and/or aggregated ambient noise levels.",
+          "avgOverTime": {
+            "description": "Average value of ambient noise level for the last 15 minutes",
+            "unitCode": "2N",
+            "unitText": "decibel (dB)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "airQualityLevel": {
+          "description": "Air Quality Category Indication. Qualitative level defined according to the local health agencies. For example, 'GOOD', 'MODERATE', 'POOR', 'UNHEALTHY', 'SEVERE', 'HAZARDOUS' etc.",
+          "dataSchema": "iudx:Text",
+          "type": [
+            "ValueDescriptor"
+          ]
+        },
+        "no2": {
+          "description": "Describes instantaneous and/or aggregated values for nitrogen dioxide(NO2).",
+          "maxOverTime": {
+            "description": "Maximum value of NO2 for the last 24 hours",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of NO2 for the last 15 minutes",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Maximum value of NO2 for the last 24 hours",
+            "unitCode": "61",
+            "unitText": "part per billion (ppb)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "relativeHumidity": {
+          "description": "Describes instantaneous and/or aggregated values for relativeHumidity.",
+          "avgOverTime": {
+            "description": "Average value of relative humidity (water vapour in air) for last 15 minutes.",
+            "unitCode": "P1",
+            "unitText": "percent",
+            "type": [
+              "ValueDescriptor"
+            ],
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "dataSchema": "iudx:Number"
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "dataDescriptorLabel": "Data Descriptor for data from Bosch-climo AQM sensors in Pune city.",
+        "atmosphericPressure": {
+          "description": "Describes instantaneous and/or aggregated values for atmospheric pressure.",
+          "avgOverTime": {
+            "description": "Average value of air pressure for the last 15 minutes",
+            "unitCode": "ATM",
+            "unitText": "standard atmosphere (atm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "observationDateTime": {
+          "description": "Last reported time of observation.",
+          "dataSchema": "iudx:DateTime",
+          "type": [
+            "ValueDescriptor"
+          ]
+        },
+        "pm2p5": {
+          "description": "Describes instantaneous and/or aggregated values for particulate matter 2.5(PM2.5).",
+          "maxOverTime": {
+            "description": "Maximum value of PM2.5 for the last 24 hours",
+            "unitCode": "GQ",
+            "unitText": "micro gram per cubic metre (ug/m3)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of PM2.5 for the last 15 minutes",
+            "unitCode": "GQ",
+            "unitText": "micro gram per cubic metre (ug/m3)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Maximum value of PM2.5 for the last 24 hours",
+            "unitCode": "GQ",
+            "unitText": "micro gram per cubic metre (ug/m3)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "co": {
+          "description": "Describes instantaneous and/or aggregated values for carbon monooxide(CO).",
+          "maxOverTime": {
+            "description": "Maximum value of CO for the last 24 hours",
+            "unitCode": "59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "avgOverTime": {
+            "description": "Average value of CO for the last 24 hours",
+            "unitCode": "59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": {
+              "unitCode": "MIN",
+              "value": 15,
+              "unitText": "minutes"
+            },
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "minOverTime": {
+            "description": "Maximum value of CO for the last 24 hours",
+            "unitCode": "59",
+            "unitText": "part per million (ppm)",
+            "dataSchema": "iudx:Number",
+            "aggregationDuration": 24,
+            "type": [
+              "ValueDescriptor"
+            ]
+          },
+          "type": [
+            "TimeSeriesAggregation"
+          ]
+        },
+        "deviceStatus": {
+          "description": "Status of the device. Whether connected or not connected.",
+          "dataSchema": "iudx:Text",
+          "type": [
+            "ValueDescriptor"
+          ]
+        },
+        "aqiMajorPollutant": {
+          "description": "Major pollutant in the Air Quality Index (AQI).",
+          "dataSchema": "iudx:Text",
+          "type": [
+            "ValueDescriptor"
+          ]
+        }
+      },
+      "repositoryURL": "https://github.com/datakaveri/sandbox-aqm.git",
+      "referenceResources": [
+        {
+          "id": "datakaveri.org/04a15c9960ffda227e9546f3f46e629e1fe4132b/rs.iudx.org.in/pune-env-aqm",
+          "name": "Pune Air Quality Monitoring Sensors",
+          "description": "Air quality monitoring devices/sensors in Pune city",
+          "additionalInfoURL": "https://catalogue.iudx.org.in/dataset/datakaveri.org-04a15c9960ffda227e9546f3f46e629e1fe4132b-rs.iudx.org.in-pune-env-aqm"
+
+        }
+      ]
+      "itemCreatedAt": "2021-07-05T12:05:26+0530",
+      "instance": "sandbox"
+    }

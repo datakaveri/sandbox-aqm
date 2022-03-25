@@ -1,0 +1,78 @@
+[
+    {
+        "tags": [
+            "environment",
+            "air quality",
+            "climate",
+            "air",
+            "aqi",
+            "aqm",
+            "pollution",
+            "so2",
+            "co2",
+            "co",
+            "no",
+            "no2",
+            "pm2.5",
+            "pm10",
+            "humidity",
+            "temperature",
+            "ozone",
+            "o3",
+            "noise",
+            "light",
+            "uv"
+        ],
+        "type": [
+            "iudx:Resource",
+            "iudx:EnvAQM"
+        ],
+        "description": "Archive for the month of January 2022",
+        "@context": "https://voc.iudx.org.in/",
+        "label": "January 2022",
+        "provider": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc",
+        "name": "puneaqmjan2022",
+        "itemStatus": "ACTIVE",
+        "resourceGroup": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc/cat-sandbox.iudx.org.in/pune-env-aqm",
+        "downloadURL": "https://iudx-cat-sandbox-dev.s3.ap-south-1.amazonaws.com/pune-aqm-data/pune-aqm-jan.parquet",
+        "instance": "sandbox"
+    },
+    {
+        "tags": [
+            "environment",
+            "air quality",
+            "climate",
+            "air",
+            "aqi",
+            "aqm",
+            "pollution",
+            "so2",
+            "co2",
+            "co",
+            "no",
+            "no2",
+            "pm2.5",
+            "pm10",
+            "humidity",
+            "temperature",
+            "ozone",
+            "o3",
+            "noise",
+            "light",
+            "uv"
+        ],
+        "type": [
+            "iudx:Resource",
+            "iudx:EnvAQM"
+        ],
+        "description": "Archive for the month of February 2022",
+        "@context": "https://voc.iudx.org.in/",
+        "label": "February 2022",
+        "provider": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc",
+        "name": "puneaqmfeb2022",
+        "itemStatus": "ACTIVE",
+        "resourceGroup": "datakaveri.org/f7e044eee8122b5c87dce6e7ad64f3266afa41dc/cat-sandbox.iudx.org.in/pune-env-aqm",
+        "downloadURL": "https://iudx-cat-sandbox-dev.s3.ap-south-1.amazonaws.com/pune-aqm-data/pune-aqm-feb.parquet",
+        "instance": "sandbox"
+    }
+]
